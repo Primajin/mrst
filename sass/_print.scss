@@ -1,0 +1,21 @@
+@import "variables";
+
+#footer,
+#block-mrst-main-menu,
+.mobile-menu,
+.toggle-menu,
+.article__tags {
+  display: none;
+}
+
+#header {
+  height: 70px;
+}
+
+td {
+  border-bottom: 1px dotted $primary;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}

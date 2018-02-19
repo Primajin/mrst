@@ -1,0 +1,48 @@
+@import "variables";
+@import "mixins";
+
+.cookie-message {
+  background-color: $tabs-color;
+  bottom: 0;
+  color: $font-color;
+  left: 0;
+  min-height: 45px;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: $z-index-cookie-message;
+
+  p {
+    display: flex;
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: left;
+  }
+
+  span {
+    flex: 1 1 90%;
+    margin-right: 20px;
+
+    @include breakpoint(xl) {
+      line-height: 25px;
+    }
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  .button {
+    height: 25px;
+  }
+
+  .details {
+    background-color: $tabs-color;
+    margin-left: 10px;
+  }
+
+  .close-cookie-bar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,46 @@
+$page-background: #fff;
+$primary: #394b1d;
+$secondary: #d4af37;
+
+$milky-oolong: #e7dacc;
+
+$font-color: $primary;
+$font-serif: 400 22px 'Vidaloka', serif;
+$font-sans-serif: 300 16px 'Roboto Condensed', sans-serif;
+
+$link-color: $secondary;
+$link-color-hover: saturate(lighten($secondary, 20%), 20%);
+
+$social-color-facebook: #3b5998;
+$social-color-pinterest: #cc2127;
+$social-color-twitter: #55acee;
+$social-color-email: #333;
+
+$overlay-color: transparentize(#333, .25);
+$tabs-color: #f0f0f0;
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xs-max: $screen-sm-min - 1;
+
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+
+$transition-standard: .3s ease-in-out;
+
+$spacing: 12px;
+
+$z-index-skip: 1;
+$z-index-footer: $z-index-skip + 1;
+$z-index-mobile-menu: $z-index-footer + 1;
+$z-index-mobile-menu-toggle: $z-index-mobile-menu + 1;
+$z-index-cookie-message: $z-index-mobile-menu-toggle + 10;
+
+$header-height: 140px;
+$footer-height: 195px;
+$footer-margin-top: 30px;
+$content-height: calc(100vh - #{$header-height + $footer-height + $footer-margin-top + 2})

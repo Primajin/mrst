@@ -1,0 +1,69 @@
+@import "mixins";
+
+.owl-carousel {
+  display: none;
+  margin: 0 auto;
+
+  @include breakpoint(xs) {
+    margin-bottom: -130px;
+    transform: scale(.75, .75);
+    transform-origin: center top;
+
+    a {
+      font-size: 1.25rem;
+    }
+  }
+
+  &.owl-loaded {
+    display: block;
+  }
+
+  .item {
+    text-align: center;
+
+    a {
+      display: block;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .owl-next,
+  .owl-prev {
+    background: $tabs-color;
+    border-radius: 50%;
+    color: $link-color;
+    height: 40px;
+    opacity: .5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity $transition-standard;
+    width: 40px;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  .owl-prev {
+    left: 0;
+  }
+
+  .owl-next {
+    right: 0;
+  }
+
+  &:hover {
+    .owl-next,
+    .owl-prev {
+      opacity: 1;
+    }
+  }
+}

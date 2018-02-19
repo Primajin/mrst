@@ -1,0 +1,160 @@
+@import "variables";
+@import "mixins";
+
+.home article,
+#block-views-block-owl-carousel-block-1,
+#block-mrst-local-tasks,
+.with-subnav #content-area,
+footer .container {
+  margin: 0 auto;
+  max-width: calc(100% - 40px);
+
+  @include breakpoint(sm) {
+    max-width: $container-sm;
+  }
+
+  @include breakpoint(md) {
+    max-width: $container-md;
+  }
+
+  @include breakpoint(lg) {
+    max-width: $container-lg;
+  }
+
+  @include breakpoint(xl) {
+    max-width: $container-xl;
+  }
+}
+
+#Verkauf + div {
+  h3 {
+    margin-top: 0;
+  }
+
+  img {
+    margin-bottom: 20px;
+  }
+}
+
+.marktzeit-logo {
+  margin: 5px 15px 15px 0;
+  width: 60px;
+}
+
+.site-logo {
+  margin-left: 15px;
+
+  //&::after {
+  //  display: none;
+  //}
+}
+
+.button {
+  background: $primary;
+  border-color: $primary;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+  color: $link-color;
+  display: inline-block;
+  padding: 3px 5px 2px;
+  text-align: center;
+  transition: color $transition-standard, background-color $transition-standard;
+
+  &:hover {
+    background: lighten($primary, 10%);
+    color: $link-color-hover;
+  }
+}
+
+.contact-bar {
+  background-color: #f0f0f0;
+  border-color: transparent;
+  border-radius: 5px;
+  margin: 30px 0;
+  padding: 20px;
+
+  a[rel="nofollow"] {
+    @extend .button;
+    padding: 12px 20px 10px;
+  }
+
+  @include breakpoint(sm) {
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    p {
+      float: left;
+      max-width: calc(100% - 200px);
+    }
+
+    a[rel="nofollow"] {
+      float: right;
+
+    }
+
+  }
+}
+
+a[href="#skip"] {
+  background: transparentize($primary, .5);
+  border-radius: 50%;
+  bottom: 30px;
+  color: $page-background;
+  display: block;
+  height: 40px;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 30px;
+  text-align: center;
+  transition: opacity $transition-standard;
+  vertical-align: middle;
+  width: 40px;
+  z-index: $z-index-skip;
+
+  svg {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.submitted {
+  display: none;
+}
+
+.feed-icon {
+  display: none;
+}
+
+article {
+  table {
+    width: 100%;
+  }
+
+  th {
+    max-width: 40%;
+    text-align: left;
+
+    @include breakpoint(sm) {
+      width: 250px;
+    }
+  }
+
+  th, td {
+    padding: 2px 4px;
+  }
+
+  tr:nth-child(even) {
+    background: $page-background;
+  }
+}

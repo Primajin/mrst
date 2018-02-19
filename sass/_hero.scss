@@ -1,0 +1,12 @@
+@import "mixins";
+
+#hero {
+  background-position: center center;
+  background-size: cover;
+  height: 33vh;
+  margin-top: 30px;
+
+  @include breakpoint(sm) {
+    height: 66vh;
+  }
+}

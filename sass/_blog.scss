@@ -1,0 +1,110 @@
+@import "variables";
+@import "mixins";
+
+//BLOG INDEX
+#block-mrst-content {
+  > div > div {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .blog-item {
+    border-bottom: 1px solid $primary;
+
+    article {
+      padding: $spacing / 2;
+    }
+
+    @include breakpoint(md) {
+      margin-bottom: $spacing;
+      margin-right: $spacing;
+      width: calc(50% - #{$spacing / 2});
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+
+    figure {
+      float: left;
+      height: 150px;
+      margin: 0 $spacing $spacing 0;
+      width: 150px;
+    }
+
+    aside {
+      clear: both;
+    }
+
+    p,
+    figure {
+      &:empty {
+        display: none;
+      }
+    }
+  }
+}
+
+.tag-rezepte {
+  background-color: mix(white, $milky-oolong, 75);
+
+  header a {
+    color: $primary;
+    font-family: Freeland, sans-serif;
+    font-weight: normal;
+  }
+}
+
+//BLOG DETAIL PAGE
+
+.term-rezepte {
+  #blog span::after {
+    content: ' und leckere Rezepte';
+  }
+
+  table {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  tr {
+    background-color: $tabs-color;
+  }
+
+  h3 {
+    clear: both;
+    color: $primary;
+    font-family: Freeland, sans-serif;
+    font-weight: normal;
+  }
+}
+
+.section-blog {
+  .article__image {
+    float: left;
+    margin-bottom: $spacing;
+    margin-right: $spacing;
+  }
+
+  .article__tags {
+    clear: both;
+  }
+
+  .align-center {
+    text-align: center;
+
+    figcaption {
+      text-align: left;
+    }
+  }
+
+  .align-right {
+    margin: 12px;
+    margin-right: 0;
+  }
+
+  .align-left {
+    margin: 12px;
+    margin-left: 0;
+  }
+}

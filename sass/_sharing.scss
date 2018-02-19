@@ -1,0 +1,54 @@
+@import "variables";
+
+.soc-links,
+.soc-shr-container {
+  svg {
+    height: 19px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 19px;
+    fill: currentColor;
+  }
+
+  a {
+    background: $tabs-color;
+    border-radius: 50%;
+    color: transparentize(#333, .5);
+    display: inline-block;
+    height: 40px;
+    margin-right: 15px;
+    position: relative;
+    transition: color $transition-standard;
+    width: 40px;
+
+    &.fabo {
+      &:hover {
+        color: $social-color-facebook;
+      }
+    }
+
+    &.pnt {
+      &:hover {
+        color: $social-color-pinterest;
+      }
+    }
+
+    &.bird {
+      &:hover {
+        color: $social-color-twitter;
+      }
+    }
+
+    &.emil {
+      &:hover {
+        color: $social-color-email;
+      }
+    }
+  }
+}
+
+.soc-links a {
+  color: $social-color-email;
+}

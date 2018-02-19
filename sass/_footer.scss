@@ -1,0 +1,15 @@
+@import "variables";
+
+footer {
+  background-color: $font-color;
+  color: $page-background;
+  margin-top: $footer-margin-top;
+  padding: 40px 0;
+  position: relative;
+  text-align: center;
+  z-index: $z-index-footer;
+
+  a {
+    color: inherit;
+  }
+}

@@ -1,0 +1,45 @@
+@import "variables";
+
+@mixin breakpoint($device) {
+  @if ($device == xs) {
+    // until 575
+    @media only screen and (max-width: $screen-xs-max) {
+      @content;
+    }
+  } @else if ($device == sm) {
+    // from 576px
+    @media only screen and (min-width: $screen-sm-min) {
+      @content;
+    }
+  } @else if ($device == md) {
+    // from 768px
+    @media only screen and (min-width: $screen-md-min) {
+      @content;
+    }
+  } @else if ($device == lg) {
+    // from 1024px
+    @media only screen and (min-width: $screen-lg-min) {
+      @content;
+    }
+  } @else if ($device == xl) {
+    // from 1200px - open end
+    @media only screen and (min-width: $screen-xl-min) {
+      @content;
+    }
+  } @else if ($device == portrait) {
+    // devices in portrait orientation
+    @media only screen and (orientation: portrait) {
+      @content;
+    }
+  } @else if ($device == landscape) {
+    // devices in landscape orientation
+    @media only screen and (orientation: landscape) {
+      @content;
+    }
+  } @else {
+    //custom breakpoint
+    @media only screen and (min-width: $device * 1px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import "variables";
+@import "mixins";
+
+.field-group-tabs-wrapper {
+  clear: both;
+  margin: 30px 0;
+
+  @include breakpoint(641) {
+    background-color: $tabs-color;
+  }
+
+  details {
+    border-top: 1px solid transparent;
+  }
+
+  summary {
+    background: $tabs-color;
+    padding: 15px 10px;
+
+    a {
+      color: transparentize(#666, .1);
+      pointer-events: none;
+    }
+
+    + div {
+      background: $tabs-color;
+      padding: 10px;
+    }
+  }
+
+  .horizontal-tabs {
+    border: 0;
+
+    .horizontal-tabs-list {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid $page-background;
+    }
+
+    .horizontal-tab-button {
+      background: transparent;
+      border-color: $page-background;
+      text-align: center;
+      transition: background-color $transition-standard;
+
+      a {
+        color: transparentize(#666, .1);
+
+        strong {
+          font-weight: 300;
+        }
+      }
+
+      &.selected {
+        background-color: transparentize(#000, .95);
+
+        a {
+          color: transparentize(#333, .1);
+        }
+      }
+    }
+  }
+
+  .horizontal-tabs-pane {
+    padding: 0;
+  }
+
+}

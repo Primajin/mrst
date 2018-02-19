@@ -1,0 +1,24 @@
+@import "mixins";
+
+.similar-products {
+  display: flex;
+  flex-flow: row wrap;
+
+  .views-row {
+    margin: 0 20px 20px 0;
+    text-align: center;
+    width: calc(50% - 20px);
+
+    @include breakpoint(sm) {
+      width: calc(25% - 20px);
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  a {
+    display: block;
+  }
+}
