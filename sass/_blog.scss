@@ -5,8 +5,16 @@
 #block-mrst-content {
   > div > div {
     display: grid;
-    grid-gap: 10px;
     justify-content: center;
+    grid-gap: 20px 10px;
+
+    @include breakpoint(425) {
+      grid-template-columns: 180px 180px;
+    }
+
+    @include breakpoint(sm) {
+      grid-template-columns: 180px 180px 180px;
+    }
   }
 
   .blog-item {
@@ -15,6 +23,14 @@
       &:empty {
         display: none;
       }
+    }
+
+    figure {
+      margin: 0 auto 5px;
+    }
+
+    h3 {
+      margin: 0;
     }
   }
 

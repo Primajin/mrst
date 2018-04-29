@@ -169,8 +169,15 @@
               $pagerItems.filter('.pager__item--next').find('[aria-hidden]').text('mehr Rezepte »');
             }
 
-            var firstBlogItem = $('#block-mrst-content').find('.blog-item').first();
-            $('.pager').clone().insertBefore(firstBlogItem);
+            var $wholePager = $('.pager');
+            $wholePager.clone().prependTo($wholePager.parent());
+          }
+
+          var $tagDescription = $('.tag-description');
+          if ($tagDescription && $tagDescription.length) {
+            var $stupidWrapper = $tagDescription.parent().parent();
+            $tagDescription.prependTo('#block-mrst-content');
+            $stupidWrapper.remove();
           }
         }
       }
