@@ -9,11 +9,20 @@
     grid-gap: 20px 10px;
 
     @include breakpoint(425) {
-      grid-template-columns: 180px 180px;
+      grid-template-columns: repeat(2, 180px);
     }
 
     @include breakpoint(sm) {
-      grid-template-columns: 180px 180px 180px;
+      grid-template-columns: repeat(3, 180px);
+    }
+
+    @include breakpoint(lg) {
+      grid-column-gap: 1.5%;
+      justify-content: left;
+    }
+
+    @include breakpoint(1465) {
+      grid-template-columns: repeat(6, 180px);
     }
   }
 
@@ -42,6 +51,10 @@
       grid-column-end: 4;
     }
 
+    @include breakpoint(1465) {
+      grid-column-end: 7;
+    }
+
     ul {
       display: flex;
       justify-content: space-between;
@@ -65,6 +78,89 @@
     @include breakpoint(sm) {
       font-size: 20px;
     }
+  }
+}
+
+.page-tags-rezepte,
+.page-tags-susses,
+.page-tags-herzhaftes {
+  #content-area {
+    max-width: calc(100% - 40px) !important;
+  }
+
+  #block-mrst-local-tasks {
+    flex: 100%;
+    max-width: none;
+    width: 100%;
+  }
+
+  @include breakpoint(md) {
+    #content-area > div {
+      display: flex;
+      flex-flow: row wrap;
+
+      #block-rezeptemenu {
+        width: 20%;
+      }
+
+      #block-mrst-content {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.recipe-menu {
+  @include breakpoint(md) {
+    padding-right: 30px;
+  }
+
+  @include breakpoint(lg) {
+    padding-right: 50px;
+  }
+
+  ul {
+    border-bottom: 1px solid $primary;
+    border-top: 1px solid $primary;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 10px 0;
+    list-style-type: none;
+
+    @include breakpoint(md) {
+      border: 0;
+      display: block;
+      padding: 0;
+    }
+  }
+
+  li {
+    display: inline;
+
+    @include breakpoint(md) {
+      border-bottom: 1px solid $primary;
+      display: list-item;
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    color: $primary;
+    font-family: $font-family-serif;
+    padding: 0 5px;
+    text-transform: uppercase;
+  }
+}
+
+.tag-description {
+  border-bottom: 1px solid $primary;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  @include breakpoint(md) {
+    border-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
