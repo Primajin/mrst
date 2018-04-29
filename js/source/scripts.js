@@ -32,7 +32,6 @@
 
         //add menu
         var $menuContainer = $('#block-mrst-main-menu');
-
         if ($menuContainer && $menuContainer.length) {
           var $menuToggle = $(
             '<div class="toggle-menu"><span class="ham"></span></div>').
@@ -129,6 +128,51 @@
             }
           }
         });
+
+        //blog
+        if (document.body.classList.contains('section-blog') || document.body.classList.contains('section-tags')) {
+          var $pager = $('.pager__items');
+          if ($pager && $pager.length) {
+            //pager
+            //remove first page link - if on first page nothing happens
+            $pager.find('.pager__item--first').remove();
+
+            var $activePageListItem = $pager.find('.pager__item--active');
+
+            //get current active page
+            var activePage;
+            if ($activePageListItem && $activePageListItem.length) {
+              activePage = parseInt($activePageListItem.children('a').attr('href').replace(/^\D+/g, ''), 10) + 1;
+            }
+            var pagesLength = activePage;
+
+            //remove last page link - if on last page pagesLength must be activePage
+            var $lastPageListItem = $pager.find('.pager__item--last');
+            if ($lastPageListItem && $lastPageListItem.length) {
+              pagesLength = parseInt($lastPageListItem.children('a').attr('href').replace(/^\D+/g, ''), 10) + 1;
+              $lastPageListItem.remove();
+            }
+
+            var $pagerItems = $pager.find('.pager__item');
+            if (activePage && pagesLength) {
+              $pagerItems.first().after('<li>Seite ' + activePage + ' / ' + pagesLength + '</li>');
+            }
+
+            //remove the rest of the pager items
+            $pagerItems.not('.pager__item--next').not('.pager__item--previous').remove();
+            if (
+              document.body.classList.contains('page-tags-rezepte') ||
+              document.body.classList.contains('page-tags-susses') ||
+              document.body.classList.contains('page-tags-herzhaftes')
+            ) {
+              $pagerItems.filter('.pager__item--previous').find('[aria-hidden]').text('« mehr Rezepte');
+              $pagerItems.filter('.pager__item--next').find('[aria-hidden]').text('mehr Rezepte »');
+            }
+
+            var firstBlogItem = $('#block-mrst-content').find('.blog-item').first();
+            $('.pager').clone().insertBefore(firstBlogItem);
+          }
+        }
       }
       // $(window).on('load', function () {
       //   // Execute code once the window is fully loaded.

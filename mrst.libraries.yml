@@ -9,9 +9,9 @@ global:
     js/jquery.cookieBar.min.js: {}
     js/owl.carousel.min.js: {}
     js/build/scripts.js: {}
-  # dependencies:
-  #   - core/drupal
-  #   - core/jquery
+  dependencies:
+    - core/drupal
+    - core/jquery
 
   # Uncomment the code above to load scripts.js file on all pages. This file also requires JQuery to be
   # loaded on all pages. Consider implimenting your scripts through theme libraries if you wish to

@@ -43,6 +43,23 @@
       }
     }
   }
+
+  .pager {
+    flex: 1 0 100%;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 0;
+    }
+
+    li,
+    a {
+      color: $primary;
+      font-family: $font-family-serif;
+    }
+  }
 }
 
 .tag-rezepte {
@@ -50,8 +67,7 @@
 
   header a {
     color: $primary;
-    font-family: Freeland, sans-serif;
-    font-weight: normal;
+    font: $font-cursive;
   }
 }
 
