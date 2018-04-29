@@ -4,38 +4,12 @@
 //BLOG INDEX
 #block-mrst-content {
   > div > div {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
   }
 
   .blog-item {
-    border-bottom: 1px solid $primary;
-
-    article {
-      padding: $spacing / 2;
-    }
-
-    @include breakpoint(md) {
-      margin-bottom: $spacing;
-      margin-right: $spacing;
-      width: calc(50% - #{$spacing / 2});
-
-      &:nth-child(odd) {
-        margin-right: 0;
-      }
-    }
-
-    figure {
-      float: left;
-      height: 150px;
-      margin: 0 $spacing $spacing 0;
-      width: 150px;
-    }
-
-    aside {
-      clear: both;
-    }
-
     p,
     figure {
       &:empty {
@@ -45,7 +19,12 @@
   }
 
   .pager {
-    flex: 1 0 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @include breakpoint(sm) {
+      grid-column-end: 4;
+    }
 
     ul {
       display: flex;
@@ -63,11 +42,13 @@
 }
 
 .tag-rezepte {
-  background-color: mix(white, $milky-oolong, 75);
-
   header a {
     color: $primary;
     font: $font-cursive;
+
+    @include breakpoint(sm) {
+      font-size: 20px;
+    }
   }
 }
 
