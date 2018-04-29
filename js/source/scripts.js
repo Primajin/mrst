@@ -175,7 +175,7 @@
 
           var $tagDescription = $('.tag-description');
           if ($tagDescription && $tagDescription.length) {
-            var $stupidWrapper = $tagDescription.parent().parent();
+            var $stupidWrapper = $tagDescription.closest('.views-element-container');
             $tagDescription.prependTo('#block-mrst-content');
             $stupidWrapper.remove();
           }
