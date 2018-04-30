@@ -91,6 +91,7 @@
   #block-mrst-local-tasks {
     flex: 100%;
     max-width: none;
+    min-width: 80vw;
     width: 100%;
   }
 
@@ -188,15 +189,20 @@
   }
 }
 
-.section-blog {
+.section-blog.section-blog.section-blog {
+  #content-area {
+    @include breakpoint(900) {
+      max-width: 875px;
+    }
+  }
+
   .article__image {
-    float: left;
-    margin-bottom: $spacing;
-    margin-right: $spacing;
+    margin-bottom: 20px;
   }
 
   .article__tags {
     clear: both;
+    margin-top: 20px;
   }
 
   .align-center {
@@ -205,6 +211,10 @@
     figcaption {
       text-align: left;
     }
+  }
+
+  figure {
+    margin: 0 auto;
   }
 
   .align-right {
