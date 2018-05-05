@@ -80,17 +80,16 @@
         headline.innerHTML = '<span>Produkte</span>';
       }
 
-      var blog = document.getElementById('block-mrst-page-title');
-      if (blog) {
-        blog = blog.querySelector('h1');
-        blog.setAttribute('id', 'blog');
-        blog.innerHTML = '<span>Blog</span>';
-      }
-
       var productheadline = document.getElementById('block-views-block-similar-products-block-1');
       if (productheadline) {
         productheadline = productheadline.querySelector('h2');
         productheadline.innerHTML = '<span>Ähnliche Produkte</span>';
+      }
+
+      var productheadline2 = document.getElementById('block-views-block-rezepte-rezepte');
+      if (productheadline2) {
+        productheadline2 = productheadline2.querySelector('h2');
+        productheadline2.innerHTML = '<span>Rezepte mit diesem Produkt</span>';
       }
 
       var title = document.querySelector('.section-produkt h1');

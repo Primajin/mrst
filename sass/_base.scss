@@ -15,7 +15,8 @@ h1, h2, h3, h4, h5, h6 {
   font: $font-serif;
 }
 
-#blog,
+//.product-details h1,
+.section-blog h1,
 h2 {
   border-bottom: 2px solid $font-color;
   font-size: 20px;

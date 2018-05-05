@@ -32,7 +32,13 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes }}>
+{%
+  set classes = [
+    css_name,
+    css_class
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
   {{ title_suffix }}
