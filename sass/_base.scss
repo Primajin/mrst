@@ -16,18 +16,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 //.product-details h1,
-.section-blog h1,
+.section-blog[class*="page-"]:not(.page-blog) h1,
 h2 {
-  border-bottom: 2px solid $font-color;
   font-size: 20px;
-  line-height: 0.1em;
-  margin: 20px 0 50px;
-  padding-top: 30px;
+  line-height: 34px;
   text-align: center;
 
-  span {
-    background: $page-background;
-    padding: 0 20px;
+  @include breakpoint(md) {
+    border-bottom: 2px solid $font-color;
+    line-height: 0.1em;
+    margin: 20px 0 50px;
+    padding-top: 30px;
+
+    span {
+      background: $page-background;
+      padding: 0 20px;
+    }
   }
 }
 
