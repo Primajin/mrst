@@ -13,8 +13,9 @@
     "grunt-contrib-watch": "^1.0.1",
     "grunt-notify": "^0.4.5",
     "grunt-postcss": "^0.9.0",
-    "grunt-sass": "^2.1.0",
+    "grunt-sass": "^3.0.0",
     "grunt-svgmin": "^5.0.0",
+    "node-sass": "^4.9.0",
     "pixrem": "^4.0.1",
     "postcss": "^6.0.22"
   },
