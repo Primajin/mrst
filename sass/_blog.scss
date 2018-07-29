@@ -211,6 +211,12 @@ body:not(.term-rezepte) {
 
   .article__image {
     margin-bottom: 20px;
+    text-align: center;
+
+    img {
+      object-fit: contain;
+      max-height: 500px;
+    }
   }
 
   .article__tags {
