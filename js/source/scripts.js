@@ -131,7 +131,7 @@
 
         //blog
         if (document.body.classList.contains('section-blog') || document.body.classList.contains('section-tags') ||
-          document.body.classList.contains('section-rezepte')) {
+          document.body.classList.contains('page-rezepte')) {
           var $pager = $('.pager__items');
           if ($pager && $pager.length) {
             //pager
@@ -163,6 +163,7 @@
             $pagerItems.not('.pager__item--next').not('.pager__item--previous').remove();
             if (
               document.body.classList.contains('page-tags-rezepte') ||
+              document.body.classList.contains('page-rezepte') ||
               document.body.classList.contains('page-tags-susses') ||
               document.body.classList.contains('page-tags-herzhaftes')
             ) {

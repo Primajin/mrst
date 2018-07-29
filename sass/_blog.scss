@@ -86,6 +86,7 @@
   }
 }
 
+.page-rezepte,
 .page-tags-rezepte,
 .page-tags-susses,
 .page-tags-herzhaftes {
@@ -199,6 +200,12 @@ body:not(.term-rezepte) {
     color: $primary;
     font-family: Freeland, sans-serif;
     font-weight: normal;
+  }
+
+  .max50 {
+    margin: 0 auto;
+    max-width: 50%;
+    text-align: center;
   }
 }
 
