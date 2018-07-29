@@ -130,7 +130,8 @@
         });
 
         //blog
-        if (document.body.classList.contains('section-blog') || document.body.classList.contains('section-tags') || document.body.classList.contains('section-rezepte')) {
+        if (document.body.classList.contains('section-blog') || document.body.classList.contains('section-tags') ||
+          document.body.classList.contains('section-rezepte')) {
           var $pager = $('.pager__items');
           if ($pager && $pager.length) {
             //pager

@@ -214,8 +214,8 @@ body:not(.term-rezepte) {
     text-align: center;
 
     img {
-      object-fit: contain;
       max-height: 500px;
+      object-fit: contain;
     }
   }
 
@@ -237,12 +237,10 @@ body:not(.term-rezepte) {
   }
 
   .align-right {
-    margin: 12px;
-    margin-right: 0;
+    margin: 12px 0 12px 12px;
   }
 
   .align-left {
-    margin: 12px;
-    margin-left: 0;
+    margin: 12px 12px 12px 0;
   }
 }
