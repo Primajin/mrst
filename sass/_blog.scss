@@ -141,30 +141,28 @@
 }
 
 body:not(.term-rezepte) {
-  .recipe-menu {
-    @include breakpoint(md) {
+  @include breakpoint(md) {
+    .recipe-menu {
       padding-right: 30px;
-    }
 
-    @include breakpoint(lg) {
-      padding-right: 50px;
-    }
-
-    ul {
-      @include breakpoint(md) {
+      ul {
         border: 0;
         display: block;
         justify-content: space-around;
         padding: 0;
       }
-    }
 
-    li {
-      @include breakpoint(md) {
+      li {
         border-bottom: 1px solid $primary;
         display: list-item;
         margin-bottom: 20px;
       }
+    }
+  }
+
+  @include breakpoint(lg) {
+    .recipe-menu {
+      padding-right: 50px;
     }
   }
 }
