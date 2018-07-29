@@ -51,7 +51,7 @@ footer .container {
 
 .button {
   background: $primary;
-  border-color: $primary;
+  border: 1px solid transparent;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
   color: $link-color;
