@@ -230,6 +230,12 @@ body:not(.term-rezepte) {
       }
     }
   }
+
+  .print-button {
+    svg {
+      vertical-align: bottom;
+    }
+  }
 }
 
 .section-blog.section-blog.section-blog {
@@ -251,7 +257,7 @@ body:not(.term-rezepte) {
 
   .article__tags {
     clear: both;
-    margin-top: 20px;
+    margin: 20px 0;
   }
 
   .align-center {

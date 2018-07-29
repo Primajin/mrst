@@ -9,7 +9,7 @@
 }
 
 #header {
-  height: 70px;
+  height: 116px;
 }
 
 td {
@@ -18,4 +18,8 @@ td {
 
 tr:last-child td {
   border-bottom: 0;
+}
+
+.print-button {
+  display: none;
 }

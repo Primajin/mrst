@@ -182,6 +182,21 @@
             $stupidWrapper.remove();
           }
         }
+
+        if (
+          document.body.classList.contains('page-rezepte') ||
+          document.body.classList.contains('page-tags-rezepte') ||
+          document.body.classList.contains('page-tags-susses') ||
+          document.body.classList.contains('page-tags-herzhaftes')
+        ) {
+          var $contentArea = $('#content-area');
+          if ($contentArea && $contentArea.length) {
+            $contentArea.prepend('<h2><span>Mrs Ts Rezeptbuch</span></h2>' +
+              '<p>Delikatessen mit Tee selbst zaubern? Kein Problem!</p>' +
+              '<p>In Mrs Ts Rezeptbuch sammeln wir Kreationen und Rezepte, die Ihr ganz einfach nachmachen könnt.<br>' +
+              'Wir wünschen viel Spaß beim Ausprobieren und lasst es Euch schmecken!</p>');
+          }
+        }
       }
       // $(window).on('load', function () {
       //   // Execute code once the window is fully loaded.
