@@ -180,6 +180,10 @@ body:not(.term-rezepte) {
 
 //BLOG DETAIL PAGE
 .term-rezepte {
+  ol li {
+    margin-bottom: 10px;
+  }
+
   #blog span::after {
     content: ' und leckere Rezepte';
   }
