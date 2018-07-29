@@ -205,6 +205,27 @@ body:not(.term-rezepte) {
     max-width: 50%;
     text-align: center;
   }
+
+  @include breakpoint(1440) {
+    .recipe-menu {
+      left: 20px;
+      position: absolute;
+      width: 16%;
+
+      ul {
+        border: 0;
+        display: block;
+        justify-content: space-around;
+        padding: 0;
+      }
+
+      li {
+        border-bottom: 1px solid $primary;
+        display: list-item;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .section-blog.section-blog.section-blog {
