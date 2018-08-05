@@ -154,7 +154,16 @@ article {
     padding: 2px 4px;
   }
 
-  tr:nth-child(even) {
-    background: $page-background;
+  //tr:nth-child(even) {
+  //  background: $page-background;
+  //}
+  //Email 05.08.2018, 11:08
+
+  td {
+    border-bottom: 1px dotted $primary;
+  }
+
+  tr:last-child td {
+    border-bottom: 0;
   }
 }
