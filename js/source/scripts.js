@@ -214,8 +214,8 @@
       $(window).on('scroll', function () {
         // Execute code when the window scrolls.
         var $scrollTop = $('a[href="#skip"]');
-        if (document.body.classList.contains('jQuery') &&
-          $(this).scrollTop() > 300) {
+        $scrollTop.attr('title', 'Zum Anfang der Seite springen');
+        if (document.body.classList.contains('jQuery') && $(this).scrollTop() > 300) {
           $scrollTop.addClass('visible');
         } else {
           $scrollTop.removeClass('visible');
