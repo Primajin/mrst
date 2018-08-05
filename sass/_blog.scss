@@ -99,6 +99,20 @@
     max-width: none;
     min-width: 80vw;
     width: 100%;
+    order: 1;
+  }
+
+  #block-einleitung {
+    order: 2;
+    width: 100%;
+  }
+
+  #block-rezeptemenu {
+    order: 3;
+  }
+
+  #block-mrst-content {
+    order: 99;
   }
 
   @include breakpoint(md) {
@@ -110,8 +124,18 @@
         width: 20%;
       }
 
+      #block-einleitung {
+        order: 4;
+        width: 80%;
+
+        h2 {
+          max-width: 570px;
+        }
+      }
+
       #block-mrst-content {
         width: 80%;
+        margin-left: 20%;
       }
     }
   }
