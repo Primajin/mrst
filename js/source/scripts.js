@@ -181,6 +181,11 @@
             $tagDescription.prependTo('#block-mrst-content');
             $stupidWrapper.remove();
           }
+
+          var $recipeMenu = $('.recipe-menu');
+          if ($recipeMenu && $recipeMenu.length) {
+            $recipeMenu.find('a[href="' + window.location.pathname + '"]').parent().addClass('active');
+          }
         }
 
         if (
