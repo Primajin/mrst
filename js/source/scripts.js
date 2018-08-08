@@ -197,7 +197,7 @@
           var $contentArea = $('#content-area');
           if ($contentArea && $contentArea.length) {
 
-            $contentArea.find('#block-mrst-local-tasks').after('<div id="block-einleitung"><h2><span>Mrs Ts Rezeptbuch</span></h2>' +
+            $contentArea.find('#block-rezeptemenu').before('<div id="block-einleitung"><h2><span>Mrs Ts Rezeptbuch</span></h2>' +
               '<p>Delikatessen mit Tee selbst zaubern? Kein Problem!</p>' +
               '<p>In Mrs Ts Rezeptbuch sammeln wir Kreationen und Rezepte, die Ihr ganz einfach nachmachen könnt.<br>' +
               'Wir wünschen viel Spaß beim Ausprobieren und lasst es Euch schmecken!</p></div>');

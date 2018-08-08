@@ -1,6 +1,6 @@
 {
   "name": "mrst",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "start": "grunt"
   },
@@ -22,6 +22,6 @@
   "description": "=========================== How to Use Grunt with mrst ===========================",
   "main": "Gruntfile.js",
   "devDependencies": {},
-  "author": "",
+  "author": "Jannis Hell",
   "license": "MIT"
 }
