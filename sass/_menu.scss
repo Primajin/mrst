@@ -27,6 +27,7 @@ nav .menu {
       a {
         color: $font-color;
         font: $font-serif;
+        font-size: 17px;
       }
     }
   }
@@ -35,6 +36,12 @@ nav .menu {
   .mobile-menu.active,
   .toggle-menu {
     display: none;
+  }
+}
+
+@include breakpoint(lg) {
+  nav .menu li a {
+    font-size: 22px;
   }
 }
 
