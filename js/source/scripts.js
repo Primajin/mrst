@@ -54,7 +54,9 @@
           if (document.body.classList.contains('with-subnav')) {
             $menuContainer.find('a').each(function () {
               var $this = $(this);
-              $this.attr('href', '/' + $this.attr('href'));
+              if ($this.attr('href').charAt(0) === '#') {
+                $this.attr('href', '/' + $this.attr('href'));
+              }
             });
           }
         }
