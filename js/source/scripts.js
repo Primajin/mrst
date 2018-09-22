@@ -33,6 +33,15 @@
         //add menu
         var $menuContainer = $('#block-mrst-main-menu');
         if ($menuContainer && $menuContainer.length) {
+          if (document.body.classList.contains('with-subnav')) {
+            $menuContainer.find('a').each(function () {
+              var $this = $(this);
+              if ($this.attr('href').charAt(0) === '#') {
+                $this.attr('href', '/' + $this.attr('href'));
+              }
+            });
+          }
+
           var $menuToggle = $(
             '<div class="toggle-menu"><span class="ham"></span></div>').
             on('click', function () {
@@ -50,15 +59,6 @@
           });
 
           $menu.insertAfter($menuContainer);
-
-          if (document.body.classList.contains('with-subnav')) {
-            $menuContainer.find('a').each(function () {
-              var $this = $(this);
-              if ($this.attr('href').charAt(0) === '#') {
-                $this.attr('href', '/' + $this.attr('href'));
-              }
-            });
-          }
         }
 
         //share buttons
