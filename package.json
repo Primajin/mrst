@@ -8,7 +8,7 @@
     "autoprefixer": "^9.1.0",
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-uglify": "^3.4.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-notify": "^0.4.5",
