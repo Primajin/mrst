@@ -16,7 +16,7 @@
     "grunt-sass": "^3.0.1",
     "grunt-svgmin": "^5.0.0",
     "node-sass": "^4.9.2",
-    "pixrem": "^4.0.1",
+    "pixrem": "^5.0.0",
     "postcss": "^7.0.2"
   },
   "description": "=========================== How to Use Grunt with mrst ===========================",
