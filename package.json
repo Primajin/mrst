@@ -5,7 +5,7 @@
     "start": "grunt"
   },
   "dependencies": {
-    "autoprefixer": "^9.1.0",
+    "autoprefixer": "^9.7.6",
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-imagemin": "^2.0.1",
